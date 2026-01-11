@@ -111,9 +111,9 @@ export default function ProjectsSection() {
                 className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8 first:pl-4 md:first:pl-8"
               >
                 <div
-                  className="group relative w-[300px] md:w-[400px] bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300"
+                  className="group relative w-[300px] md:w-[400px] h-[400px] flex flex-col bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300"
                 >
-                  <div className="h-48 overflow-hidden bg-gray-200 dark:bg-gray-800 relative">
+                  <div className="h-48 shrink-0 overflow-hidden bg-gray-200 dark:bg-gray-800 relative">
                     {project.image ? (
                       <img
                         src={project.image}

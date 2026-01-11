@@ -16,7 +16,7 @@ export default function MobileResizableNavbar() {
         { name: "About", link: "#aboutme" },
         { name: "Skills", link: "#skills" },
         { name: "Projects", link: "#projects123" },
-        { name: "Resume", link: "#resume12" },
+
         { name: "Contact", link: "#contact" },
     ];
 

@@ -2,6 +2,7 @@
 
 import { MinimalistHero } from "@/components/ui/minimalist-hero"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function HeroSection() {
   const navLinks = [
@@ -9,7 +10,6 @@ export default function HeroSection() {
     { label: "ABOUT", href: "#aboutme" },
     { label: "SKILLS", href: "#skills" },
     { label: "PROJECTS", href: "#projects123" },
-    { label: "RESUME", href: "#resume12" },
     { label: "CONTACT", href: "#contact" },
   ]
 
@@ -24,13 +24,29 @@ export default function HeroSection() {
     <MinimalistHero
       logoText="SUBHASH."
       navLinks={navLinks}
-      mainText="SOFTWARE ENGINEER | Web Developer | AI/ML."
-      readMoreLink="#aboutme"
+      taglines={["SOFTWARE ENGINEER", "Web Developer", "AI/ML."]}
       imageSrc="/portpfp.png"
       imageAlt="K SAI SURYA SUBHASH"
       overlayText={{
-        part1: "I AM",
-        part2: "SUBHASH",
+        part1: (
+          <>
+            HI!{" "}
+            <motion.span
+              animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                repeatDelay: 1,
+                ease: "easeInOut",
+              }}
+              style={{ display: "inline-block", originX: 0.7, originY: 0.7 }}
+            >
+              👋
+            </motion.span>
+            <br /> I AM
+          </>
+        ),
+        part2: "K SUBHASH",
       }}
       socialLinks={socialLinks}
       locationText="Visakhapatnam, India"

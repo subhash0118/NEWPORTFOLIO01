@@ -10,7 +10,6 @@ export default function Navigation() {
     { title: "Skills", icon: Code },
     { type: "separator" as const },
     { title: "Projects", icon: Briefcase },
-    { title: "Resume", icon: FileText },
     { title: "Contact", icon: Mail },
   ]
 
@@ -22,8 +21,7 @@ export default function Navigation() {
       1: "#aboutme",
       2: "#skills",
       4: "#projects123",
-      5: "#resume12",
-      6: "#contact",
+      5: "#contact",
     }
 
     const sectionId = sectionMap[index]
