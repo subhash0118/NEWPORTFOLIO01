@@ -1,7 +1,7 @@
 "use client"
 
 import { MinimalistHero } from "@/components/ui/minimalist-hero"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function HeroSection() {
@@ -17,7 +17,6 @@ export default function HeroSection() {
     { icon: Github, href: "https://github.com/subhash0118" },
     { icon: Linkedin, href: "https://linkedin.com/in/ksaixsubhash" },
     { icon: Mail, href: "mailto:subhash0118@gmail.com" },
-    // { icon: Twitter, href: "#" }, // Removed Twitter as I don't have the link, can add back if needed
   ]
 
   return (
@@ -27,6 +26,7 @@ export default function HeroSection() {
       taglines={["SOFTWARE ENGINEER", "Web Developer", "AI/ML."]}
       imageSrc="/portpfp.png"
       imageAlt="K SAI SURYA SUBHASH"
+      imageClassName="rounded-[25px]"
       overlayText={{
         part1: (
           <>
@@ -50,7 +50,7 @@ export default function HeroSection() {
       }}
       socialLinks={socialLinks}
       locationText="Visakhapatnam, India"
-      className="bg-transparent" // Transparent to show particles if needed, or remove to have solid background
+      className="bg-transparent"
     />
   )
 }

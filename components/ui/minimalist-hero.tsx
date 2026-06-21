@@ -12,6 +12,7 @@ interface MinimalistHeroProps {
     taglines: string[];
     imageSrc: string;
     imageAlt: string;
+    imageClassName?: string;
     overlayText: {
         part1: React.ReactNode;
         part2: React.ReactNode;
@@ -45,6 +46,7 @@ export const MinimalistHero = ({
     taglines,
     imageSrc,
     imageAlt,
+    imageClassName,
     overlayText,
     socialLinks,
     locationText,
@@ -107,19 +109,16 @@ export const MinimalistHero = ({
 
                 {/* Right Column: Image */}
                 <div className="relative flex justify-center items-center h-full">
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="absolute z-0 h-[300px] w-[300px] rounded-full bg-yellow-400/90 md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]"
-                    ></motion.div>
                     <motion.img
                         src={imageSrc}
                         alt={imageAlt}
-                        className="relative z-10 h-[400px] w-auto md:h-[500px] lg:h-[600px] object-cover drop-shadow-2xl grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-500"
+                        className={cn(
+                            "relative z-10 h-[400px] w-auto object-cover drop-shadow-2xl transition-all duration-500 grayscale-0 md:h-[500px] md:grayscale md:hover:grayscale-0 lg:h-[600px]",
+                            imageClassName
+                        )}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
                     />
                 </div>
 
